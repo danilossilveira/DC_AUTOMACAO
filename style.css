@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f1f4fb;
+    color: #1f2937;
+}
+
+main {
+    max-width: 940px;
+    margin: 32px auto;
+    padding: 0 20px 40px;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+    font-size: 2rem;
+}
+
+p {
+    margin-top: 0;
+    color: #4b5563;
+}
+
+.drop-area {
+    border: 2px dashed #4f46e5;
+    border-radius: 16px;
+    background: #eef2ff;
+    padding: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.drop-area.dragover {
+    background: #e0e7ff;
+    border-color: #4338ca;
+}
+
+.drop-area p {
+    margin: 0 0 16px;
+    font-size: 1rem;
+}
+
+.drop-area button {
+    border: none;
+    background: #4338ca;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.status {
+    margin-top: 20px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+.preview {
+    margin-top: 28px;
+}
+
+.preview.hidden {
+    display: none;
+}
+
+.preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.preview-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.preview-header button {
+    border: none;
+    background: #10b981;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.preview-info {
+    margin: 12px 0;
+    color: #374151;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+#csv-output {
+    width: 100%;
+    min-height: 180px;
+    margin-top: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 16px;
+    font-family: Consolas, "Courier New", monospace;
+    resize: vertical;
+    background: #f8fafc;
+}
