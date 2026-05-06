@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON para CSV - Preview</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <main>
+        <h1>Conversor JSON para CSV</h1>
+        <p>Arraste um arquivo JSON ou selecione-o para processar e visualizar o CSV.</p>
+
+        <div id="drop-area" class="drop-area">
+            <p>Arraste o arquivo JSON aqui</p>
+            <button id="select-file-button" type="button">Selecionar arquivo</button>
+            <input id="file-input" type="file" accept="application/json" hidden />
+        </div>
+
+        <div id="status" class="status">Aguardando arquivo...</div>
+
+        <section id="preview-section" class="preview hidden">
+            <div class="preview-header">
+                <h2>Pré-visualização do CSV</h2>
+                <button id="copy-button" type="button">Copiar CSV</button>
+            </div>
+            <div class="preview-info">
+                <span id="preview-filename"></span>
+            </div>
+            <div class="table-wrapper">
+                <table id="preview-table">
+                    <thead>
+                        <tr>
+                            <th>Nome do Dicionário</th>
+                            <th>Business Name</th>
+                            <th>Technical Name</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <textarea id="csv-output" readonly></textarea>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
