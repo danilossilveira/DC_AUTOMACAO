@@ -26,7 +26,7 @@ function convertJsonToCsv(data) {
             continue;
         }
         if (baseName === "saida") {
-            baseName = nomeCaminho.replace(/^DLF_F_/, "").replace(/_LT_Delta$/, "");
+            baseName = nomeCaminho.replace(/^DLF_/, "").replace(/_Delta$/, "");
         }
 
         const elements = definitions[nomeCaminho].elements || {};
@@ -50,12 +50,12 @@ function convertJsonToCsv(data) {
         }
     }
 
-    lines.push(`DLF_F_${baseName}_LT;Delta padrão - Tipo da alteração do registro (Change Type);Change Type;String (1)`);
-    lines.push(`DLF_F_${baseName}_LT;Delta padrão - Data da alteração do registros (Change Date);Change Date;Timestamp`);
+    lines.push(`DLF_${baseName};Delta padrão - Tipo da alteração do registro (Change_Type);Change_Type;String (1)`);
+    lines.push(`DLF_${baseName};Delta padrão - Data da alteração do registros (Change_Date);Change_Date;Timestamp`);
 
     return {
         csv: lines.join("\n"),
-        filename: `DLF_F_${baseName}_LT.csv`,
+        filename: `DLF_${baseName}.csv`,
     };
 }
 
